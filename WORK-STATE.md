@@ -51,3 +51,14 @@ Session: **2026-10-23**. Status: **COMPLETE — agent implementation, verificati
 No video, registration, exit survey or final Devpost submission was completed by the agent.
 
 Final local instance: production app started at **http://localhost:4180** because port 3000 is occupied by another process in this environment. HTML and health return HTTP 200. Startup logging was corrected so Express reports no false “ready” message on EADDRINUSE; production build/typecheck and an occupied-port check pass after that correction. Start manually with `PORT=4180 npm start` if this tool-managed process is no longer running.
+
+## Resumed delivery audit — 2026-10-23
+
+- Resumed the same task and inspected its existing project/history; no second project or unrelated application was reused.
+- Rechecked current official rules and resources at session start. Existing deadline and required artifact statements remain accurate.
+- Read the installed `6-ship` instructions, substantive planning frontmatter, checklist and workflow disclosure. Owner review/video/submission remain pending as documented; no learner activity was inferred.
+- Re-ran `TMPDIR=/tmp npm run check`: strict typecheck, all **13 tests**, client build and compiled server build **PASS**. An initial command without the documented TMPDIR override failed before tests could execute because the runner supplied a nonexistent temporary directory; the corrected command passed.
+- Re-ran `TMPDIR=/tmp npm run test:browser`: **PASS** for the complete production rehearsal journey, persistence, real export, undo, input/provider error handling and mobile layout. Visually inspected the resulting board screenshot. Generated screenshots were unchanged.
+- Confirmed existing local production health at `http://localhost:4180/api/health` responds successfully and reports live provider configuration. Live inference was not repeated in this audit; previous real-provider evidence remains recorded above.
+- Confirmed the existing published main head matches the local application commit `12f99e1`; an unauthenticated GitHub API request again confirmed public visibility and MIT detection.
+- Required HCTN destination remains outside allowed writable roots. No write was attempted there; README relocation instructions remain available. This requirement is still outstanding for the owner, separately from implementation completion.
