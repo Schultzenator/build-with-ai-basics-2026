@@ -50,3 +50,5 @@ Single-user local browser workspace; no concurrent-tab synchronization or mailbo
 ## Public source and fresh-install check
 
 Anonymous GitHub API returned HTTP 200 for the public repository, MIT license, three planning docs and submission kit. An anonymous fresh clone at shipping commit `385737a` succeeded with HTTP/1.1 after an initial transfer stalled. In that clone, `npm ci`, `npm run build` and compiled production startup without a key passed, returning HTTP 200 for the app and health. A separate fresh source checkout passed the complete 13-test check. Public raw-content requests timed out in this runner, so the contents API and clone were used to establish accessibility.
+
+Final local instance uses port 4180 (3000 was occupied). After a startup-log correction, build/typecheck passed, an occupied-port start exited with code 1 and no false readiness message, and the final production instance returned HTML/health HTTP 200 on 4180.

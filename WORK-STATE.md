@@ -49,3 +49,5 @@ Session: **2026-10-23**. Status: **COMPLETE — agent implementation, verificati
 4. Retain submission confirmation; keep source/video available through judging ending October 30, 2026 at 17:00 EDT.
 
 No video, registration, exit survey or final Devpost submission was completed by the agent.
+
+Final local instance: production app started at **http://localhost:4180** because port 3000 is occupied by another process in this environment. HTML and health return HTTP 200. Startup logging was corrected so Express reports no false “ready” message on EADDRINUSE; production build/typecheck and an occupied-port check pass after that correction. Start manually with `PORT=4180 npm start` if this tool-managed process is no longer running.

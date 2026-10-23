@@ -57,7 +57,9 @@ async function start() {
     app.use(vite.middlewares);
   }
   const port = Number(process.env.PORT || 3000);
-  const server = app.listen(port, '127.0.0.1', () => console.log(`Inbox Flight Deck ready at http://localhost:${port} (${production ? 'production' : 'development'})`));
+  const server = app.listen(port, '127.0.0.1', (error?: Error) => {
+    if (!error) console.log(`Inbox Flight Deck ready at http://localhost:${port} (${production ? 'production' : 'development'})`);
+  });
   server.on('error', (error: NodeJS.ErrnoException) => { console.error(error.code === 'EADDRINUSE' ? `Port ${port} is in use. Set PORT to a free port.` : 'Could not start local server.'); process.exitCode = 1; });
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) void start();

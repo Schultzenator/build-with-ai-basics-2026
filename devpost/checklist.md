@@ -52,3 +52,5 @@ Activity and evidence: reference-only app map generated from code snapshot 85133
 
 - Gemini default changed from 2.5 Flash to 3.8 Flash: the provider returned 404 for new-user 2.5 access and explicitly recommended 3.8. Real 3.8 inference passed with eight exact source quotes validated (10,995 ms).
 - Sandbox TMPDIR points outside writable roots; runner commands use TMPDIR=/tmp. This is an environment adaptation, not an app dependency.
+
+- Startup readiness log now checks the Express listen callback error: occupied port 3000 exposed a false ready message before the error. Build/typecheck and explicit busy-port verification passed; final production instance uses free port 4180.
