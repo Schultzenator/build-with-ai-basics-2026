@@ -22,7 +22,7 @@ export function createApp(options: { livePlanner?: typeof geminiPlan; apiKey?: s
     next();
   });
   app.use(express.json({ limit: '128kb' }));
-  app.get('/api/health', (_req, res) => res.json({ ok: true, liveAvailable: Boolean(options.apiKey ?? process.env.GEMINI_API_KEY), model: process.env.GEMINI_MODEL || 'gemini-2.5-flash' }));
+  app.get('/api/health', (_req, res) => res.json({ ok: true, liveAvailable: Boolean(options.apiKey ?? process.env.GEMINI_API_KEY), model: process.env.GEMINI_MODEL || 'gemini-3.8-flash' }));
   app.post('/api/plan', async (req, res) => {
     const parsed = requestSchema.safeParse(req.body);
     if (!parsed.success) return res.status(400).json({ error: 'Use 1–20 unique messages, with at most 24,000 characters in total. Each message needs a sender, subject and body.' });
@@ -32,7 +32,7 @@ export function createApp(options: { livePlanner?: typeof geminiPlan; apiKey?: s
     try {
       if (engine === 'gemini') liveBusy = true;
       const plan = engine === 'rehearsal' ? rehearsalPlan(messages) : await (options.livePlanner ?? geminiPlan)(messages, { apiKey: options.apiKey });
-      return res.json({ ...plan, engine, model: engine === 'rehearsal' ? 'Deterministic rules · no LLM' : process.env.GEMINI_MODEL || 'gemini-2.5-flash', elapsedMs: Date.now() - started });
+      return res.json({ ...plan, engine, model: engine === 'rehearsal' ? 'Deterministic rules · no LLM' : process.env.GEMINI_MODEL || 'gemini-3.8-flash', elapsedMs: Date.now() - started });
     } catch (error) {
       return res.status(error instanceof AgentError ? error.status : 500).json({ error: error instanceof AgentError ? error.message : 'The plan could not be created. Your inbox has not changed.' });
     } finally { if (engine === 'gemini') liveBusy = false; }

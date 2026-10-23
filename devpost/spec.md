@@ -18,7 +18,7 @@ The browser holds a small local inbox and board. A Node server asks Gemini to pr
 - References: https://nodejs.org/docs/latest-v22.x/api/ ; https://react.dev/ ; https://vite.dev/guide/ ; https://expressjs.com/ ; https://zod.dev/ .
 
 ## Where It Runs and How Someone Tries It
-Local single-user desktop browser. `npm ci`, `npm run build`, `npm start`; open http://localhost:3000. Development: `npm run dev` (Vite middleware served by the same Node process). Node loads an optional `.env`; never bundle keys into browser code. Rehearsal always works without a key. Live requires `GEMINI_API_KEY`; `GEMINI_MODEL` defaults to `gemini-2.5-flash`, configurable if unavailable to the account.
+Local single-user desktop browser. `npm ci`, `npm run build`, `npm start`; open http://localhost:3000. Development: `npm run dev` (Vite middleware served by the same Node process). Node loads an optional `.env`; never bundle keys into browser code. Rehearsal always works without a key. Live requires `GEMINI_API_KEY`; `GEMINI_MODEL` defaults to `gemini-3.8-flash`, configurable if unavailable to the account.
 
 Public repository target: https://github.com/Schultzenator/build-with-ai-basics-2026 . Video is required and owner-provided; no deployment planned.
 

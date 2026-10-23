@@ -17,7 +17,7 @@ Build mode: fast, adapted to explicit owner delegation. Agent verification repla
   Verify (mechanical): Typecheck, planner/API tests and production build.
   Learner check: Load sample, request plan, compare an action with its source quote.
   Commit: `Build evidence-backed inbox triage preview`
-- [ ] **2. Apply decisions, export and undo**
+- [x] **2. Apply decisions, export and undo**
   Becomes usable: Selected proposals become local board actions; undo restores inbox.
   Why now: Closes the demonstrated loop without external inbox effects.
   PRD ref: `prd.md > Review and Apply`, `Board, Undo and Export`
@@ -47,3 +47,6 @@ Build mode: fast, adapted to explicit owner delegation. Agent verification repla
 - [ ] Optional owner learning reflection — not performed; no reflection authored on their behalf.
 
 ## Revisions
+
+- Gemini default changed from 2.5 Flash to 3.8 Flash: the provider returned 404 for new-user 2.5 access and explicitly recommended 3.8. Real 3.8 inference passed with eight exact source quotes validated (10,995 ms).
+- Sandbox TMPDIR points outside writable roots; runner commands use TMPDIR=/tmp. This is an environment adaptation, not an app dependency.

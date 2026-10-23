@@ -44,7 +44,7 @@ export const responseJsonSchema = {
 
 export async function geminiPlan(messages: Message[], options: { apiKey?: string; model?: string; fetcher?: typeof fetch } = {}): Promise<Plan> {
   const apiKey = options.apiKey ?? process.env.GEMINI_API_KEY;
-  const model = options.model ?? process.env.GEMINI_MODEL ?? 'gemini-2.5-flash';
+  const model = options.model ?? process.env.GEMINI_MODEL ?? 'gemini-3.8-flash';
   if (!apiKey) throw new AgentError('Live Gemini needs GEMINI_API_KEY on the server. Use rehearsal or configure .env and restart.', 503);
   if (!/^[a-zA-Z0-9._-]+$/.test(model)) throw new AgentError('Invalid GEMINI_MODEL configuration.', 503);
   let response: Response;

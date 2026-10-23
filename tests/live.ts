@@ -7,6 +7,6 @@ else {
   try {
     const plan = await geminiPlan(sampleMessages);
     assert.equal(plan.decisions.length, sampleMessages.length);
-    console.log(JSON.stringify({ result: 'PASS', provider: 'Google Gemini', model: process.env.GEMINI_MODEL || 'gemini-2.5-flash', messages: plan.decisions.length, exactQuotesValidated: true, elapsedMs: Date.now() - started, lanes: plan.decisions.map(d => d.lane) }, null, 2));
+    console.log(JSON.stringify({ result: 'PASS', provider: 'Google Gemini', model: process.env.GEMINI_MODEL || 'gemini-3.8-flash', messages: plan.decisions.length, exactQuotesValidated: true, elapsedMs: Date.now() - started, lanes: plan.decisions.map(d => d.lane) }, null, 2));
   } catch (error) { console.error(error instanceof Error ? error.message : 'Live test failed.'); process.exitCode = 1; }
 }
