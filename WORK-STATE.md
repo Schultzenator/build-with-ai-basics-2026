@@ -1,6 +1,6 @@
 # Work state
 
-Session: 2026-10-23. Status: PLANNING COMPLETE, IMPLEMENTATION NEXT.
+Session: 2026-10-23. Status: SLICE 1 VERIFIED; BOARD WORKFLOW NEXT.
 
 - Verified official Devpost rules at session start: https://learn-ai-basics.devpost.com/rules . Submission window September 22–October 26, 2026, ending 17:00 EDT (21:00 UTC / 22:00 Warsaw on October 26). Public source, planning docs and working video required. Individuals, teams and organizations allowed subject to listed exclusions; no blanket PSNET eligibility certification is made.
 - Started from a newly created empty `build-with-ai-basics-2026/` in the provided workspace; no old application code reused.
@@ -10,3 +10,5 @@ Session: 2026-10-23. Status: PLANNING COMPLETE, IMPLEMENTATION NEXT.
 - No video recorded/submitted; owner/PW does that after handoff.
 
 Next: implement slice 1, verify and commit; slice 2; documentation, audit and publish.
+
+Slice 1: typecheck, 8 planner/API tests and production build pass. Skill Pack installed successfully after setting TMPDIR=/tmp for this restricted runner. Current Gemini 2.5 endpoint rejects new-user access (404); investigating the provider-recommended current model before choosing the final default. No silent fallback implemented.

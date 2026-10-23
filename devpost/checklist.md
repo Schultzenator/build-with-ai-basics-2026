@@ -8,7 +8,7 @@ approval_basis: user authorized complete autonomous build
 Build mode: fast, adapted to explicit owner delegation. Agent verification replaces interactive pauses for this delivery; no learner feedback is fabricated.
 
 ## Slices
-- [ ] **1. Inspect a source-backed triage plan**
+- [x] **1. Inspect a source-backed triage plan**
   Becomes usable: App loads sample inbox and generates a reviewable rehearsal plan.
   Why now: Proves the distinctive evidence kernel through the full browser/server path.
   PRD ref: `prd.md > Source Inbox`, `Evidence-backed Plan`
