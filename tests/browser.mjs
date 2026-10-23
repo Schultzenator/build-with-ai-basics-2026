@@ -98,6 +98,8 @@ try {
   await page.getByRole('status').filter({ hasText: 'Saved workspace could not be loaded' }).waitFor();
   assert.equal(await page.getByTestId('inbox-count').textContent(), '8');
 
+  await page.reload(); // Storage was repaired; capture a clean recovered sample session.
+  await page.getByRole('heading', { name: /Clear the noise/ }).waitFor();
   await page.screenshot({ path: 'docs/screenshots/04-mobile.png', fullPage: true });
 
   if (process.env.LIVE_BROWSER === '1') {

@@ -43,8 +43,10 @@ Build mode: fast, adapted to explicit owner delegation. Agent verification repla
 - [ ] Owner confirms ready after recording — pending owner action, separate from agent implementation completion.
 
 ## Code Tour and App Map
-- [ ] Reference route and concrete verification lesson documented in `devpost/app-map.html`.
+- [x] Reference route and concrete verification lesson documented in `devpost/app-map.html`.
 - [ ] Optional owner learning reflection — not performed; no reflection authored on their behalf.
+
+Activity and evidence: reference-only app map generated from code snapshot 851331b; opened in Chrome with JavaScript disabled. Route: App.tsx makePlan → agent.ts validatePlan → board.ts applyDecisions/undoSession. Concrete practice: convert “only selected decisions apply” into a subset/undo invariant and test it in pure functions and the browser. No interactive tour, edit, or learner reflection was performed.
 
 ## Revisions
 
