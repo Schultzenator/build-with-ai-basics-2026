@@ -26,7 +26,7 @@ Build mode: fast, adapted to explicit owner delegation. Agent verification repla
   Verify (mechanical): Board tests; browser journey, reload, export, undo; live smoke separately.
   Learner check: Exclude one decision, apply, export, reload, undo.
   Commit: `Complete reviewed board workflow and verification`
-- [ ] **3. Prepare public source and submission handoff**
+- [x] **3. Prepare public source and submission handoff**
   Becomes usable: New reviewer can launch in three steps; PW can record and submit.
   Why now: Package verified behavior and expose planning evidence.
   PRD ref: `prd.md > Acceptance Criteria`

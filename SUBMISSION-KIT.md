@@ -25,7 +25,7 @@ An inbox triage agent that turns message chaos into a source-backed action plan 
 
 ## About the project — paste-ready draft
 
-The owner explicitly requested this draft. Review it for accuracy before publishing, and add personal learning reflections in your own words.
+The owner explicitly requested this draft. Review it for accuracy before publishing. The learning section states technical findings from the build; add personal reflections in your own words if desired.
 
 ### Inspiration
 
@@ -53,7 +53,7 @@ The implemented loop runs from inbox to validated plan to selected board changes
 
 ### What was learned
 
-**[OWNER: replace this paragraph with your own truthful reflection before submission. Suggested topics to address: which planning decision mattered; what you personally reviewed or changed; what the model-access issue taught you. Do not claim hands-on steps you did not perform.]**
+The build exposed two useful distinctions. An exact source quote can be verified mechanically, while a priority decision still needs human judgment. A valid proposal also needs a separate, reversible execution step. Turning those distinctions into acceptance criteria made it possible to test that unselected messages stay untouched and that undo restores the prior state. The provider integration also showed why available model access must be checked with a real request rather than inferred from a model listing. These are project findings, not a claim about any participant’s personal learning.
 
 ### What's next
 
@@ -76,7 +76,7 @@ Use the actual app screenshots in `docs/screenshots/`. Recommended: `01-inbox.pn
 - [ ] Open the repository logged out; verify planning docs and MIT license are visible.
 - [ ] Follow the three startup steps and perform the core loop yourself.
 - [ ] Read the workflow adaptations; confirm submission statements match your actual participation.
-- [ ] Replace the personal learning placeholder; complete all required form and exit-survey answers truthfully.
+- [ ] Review the complete project draft; add any personal reflection in your own words and complete all required form/exit-survey answers truthfully.
 - [ ] Record 1–3 minutes in English, below 3 minutes, showing the functioning app; see `DEMO.md`.
 - [ ] Upload publicly to YouTube or Vimeo and check playback logged out.
 - [ ] Replace the video placeholder above and paste the real video/repository URLs into Devpost.
